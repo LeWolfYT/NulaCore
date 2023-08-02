@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "nulacore",
+  "version": "${version}",
+  "name": "NulaCore",
+  "description": "A library containing shared code for my mods",
+  "authors": [
+    "SidGames5"
+  ],
+  "contact": {
+    "website": "https://sidgames5.github.io",
+    "repo": "https://github.com/sidgames5/NulaCore"
+  },
+  "license": "LGPL-2.1",
+  "icon": "assets/nulacore/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "dev.sidgames.nulacore.client.NulaCoreClient"
+    ],
+    "main": [
+      "dev.sidgames.nulacore.NulaCore"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
