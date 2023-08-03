@@ -11,7 +11,7 @@
     "website": "https://sidgames5.github.io",
     "repo": "https://github.com/sidgames5/NulaCore"
   },
-  "license": "LGPL-2.1",
+  "license": "LGPL-3.0",
   "icon": "assets/nulacore/icon.png",
   "environment": "*",
   "entrypoints": {
