@@ -41,5 +41,10 @@
       <option name="name" value="LoomLocalRemappedMods" />
       <option name="url" value="file:/$PROJECT_DIR$/.gradle/loom-cache/remapped_mods/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="https://packagecloud.io/BasicCorruption/Netherbyte/maven2" />
+    </remote-repository>
   </component>
 </project>
