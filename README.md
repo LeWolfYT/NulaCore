@@ -28,6 +28,6 @@ repositories {
 Add the package to the dependencies section:
 ```groovy
 dependencies {
-    modImplementation("dev.sidgames:nulacore:1.0.0")
+    modImplementation("dev.sidgames:NulaCore:1.0.0")
 }
 ```
