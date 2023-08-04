@@ -2,6 +2,8 @@
 
 A library containing shared code for my mods
 
+You can find all the releases on modrinth.
+
 ## Versioning
 
 This library follows the SemVer 2 specification. The format is `major.minor.patch`.
