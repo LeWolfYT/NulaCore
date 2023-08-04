@@ -1,6 +1,7 @@
 package dev.sidgames.nulacore;
 
 import dev.sidgames.nulacore.feature.updater.InstalledMods;
+import dev.sidgames.nulacore.feature.updater.UpdateChecker;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,12 @@ public class NulaCore implements ModInitializer {
                 throw new RuntimeException(e);
             }
             logger.info("Checking for updates");
+            var updates = UpdateChecker.recursiveCheck();
+            for (UpdateChecker.Update update : updates) {
+                if (update.available()) {
+                    logger.info("You have a mod update available! " + update.id() + " " + update.currentVersion() + " -> " + update.latestVersion());
+                }
+            }
         }, "NulaCore Update Checker");
         updateThread.start();
     }
