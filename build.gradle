@@ -79,6 +79,10 @@ jar {
 publishing {
     publications {
         mavenJava(MavenPublication) {
+            groupId = group
+            artifactId = project.artifact_name
+            version = version
+
             from components.java
         }
     }
