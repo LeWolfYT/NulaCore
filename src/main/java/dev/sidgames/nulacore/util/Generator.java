@@ -24,13 +24,21 @@ public class Generator {
         return Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
     }
 
-    @Deprecated
-    public static BlockItem generatrBlockItem(Block block, Identifier id, ItemGroup group) {
-        return Registry.register(Registry.ITEM, id, new BlockItem(block, new Item.Settings().group(group)));
-    }
-
-    @Deprecated
-    public static BlockItem generatrBlockItem(Block block, Identifier id, Item.Settings settings) {
-        return Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
+    public static List<Object> generateFromList(List<Object> items, List<Identifier> ids, List<Item.Settings> settings) {
+        List<Object> Generated = new ArrayList();
+        if (not (items.size() == ids.size() == settings.size())) {
+            throw new IllegalStateException("Lists are not of the same size.");
+        }
+        for (int i = 0; i < items.size(); i++) {
+            if (items[i] instanceof Block) {
+                Generated.add(generateBlock(items[i], ids[i]));
+                Generated.add(generateBlockItem(items[i], ids[i], settings[i]));
+            } else if (items[i] instanceof Item) {
+                Generated.add(generateItem(items[i], ids[i]));
+            } else {
+                throw new IllegalArgumentException("All objects in list must be either Block or Item.");
+            }
+        }
+        return Generated;
     }
 }
