@@ -1,4 +1,4 @@
-package dev.sidgames.nulacore.item;
+package dev.sidgames.nulacore.item.tool;
 
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemGroup;
