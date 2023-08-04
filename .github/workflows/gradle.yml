@@ -28,6 +28,10 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+    - name: Add the repo credentials thing
+      run: |
+        echo "repsyUsername=h" >> ~/.gradle/gradle.properties
+        echo "repsyPassword=h" >> ~/.gradle/gradle.properties
     - name: Make script executable
       run: chmod +x /home/runner/work/NulaCore/NulaCore/gradlew
     - name: Build with Gradle
