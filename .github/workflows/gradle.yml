@@ -30,6 +30,8 @@ jobs:
         distribution: 'temurin'
     - name: Add the repo credentials thing
       run: |
+        mkdir -p ~/.gradle/
+        touch ~/.gradle/gradle.properties
         echo "repsyUsername=h" >> ~/.gradle/gradle.properties
         echo "repsyPassword=h" >> ~/.gradle/gradle.properties
     - name: Make script executable
