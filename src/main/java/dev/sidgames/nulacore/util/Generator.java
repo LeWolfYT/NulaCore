@@ -25,11 +25,11 @@ public class Generator {
     }
 
     public static List<Object> generateFromList(List<Object> items, List<Identifier> ids, List<Item.Settings> settings) {
-        List<Object> Generated = new ArrayList()
+        List<Object> Generated = new ArrayList();
         if (not (items.size() == ids.size() == settings.size())) {
             throw new IllegalStateException("Lists are not of the same size.");
         }
-        for (i = 0; i < items.size(); i++) {
+        for (int i = 0; i < items.size(); i++) {
             if (items[i] instanceof Block) {
                 Generated.add(generateBlock(items[i], ids[i]));
                 Generated.add(generateBlockItem(items[i], ids[i], settings[i]));
@@ -39,6 +39,6 @@ public class Generator {
                 throw new IllegalArgumentException("All objects in list must be either Block or Item.");
             }
         }
-        return Generated
+        return Generated;
     }
 }
