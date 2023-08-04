@@ -16,10 +16,20 @@ public class Generator {
         return Registry.register(Registry.BLOCK, id, block);
     }
 
+    public static BlockItem generateBlockItem(Block block, Identifier id, ItemGroup group) {
+        return Registry.register(Registry.ITEM, id, new BlockItem(block, new Item.Settings().group(group)));
+    }
+
+    public static BlockItem generateBlockItem(Block block, Identifier id, Item.Settings settings) {
+        return Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
+    }
+
+    @Deprecated
     public static BlockItem generatrBlockItem(Block block, Identifier id, ItemGroup group) {
         return Registry.register(Registry.ITEM, id, new BlockItem(block, new Item.Settings().group(group)));
     }
 
+    @Deprecated
     public static BlockItem generatrBlockItem(Block block, Identifier id, Item.Settings settings) {
         return Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
     }
