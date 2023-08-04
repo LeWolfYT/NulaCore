@@ -1,5 +1,7 @@
 package dev.sidgames.nulacore.feature;
 
 public interface Feature {
-    boolean isOn();
+    boolean isEnabled();
+    void enable();
+    void disable();
 }

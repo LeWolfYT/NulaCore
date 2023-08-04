@@ -26,7 +26,7 @@ public class NulaCore implements ModInitializer {
                 throw new RuntimeException(e);
             }
             logger.info("Checking for updates");
-            var updates = UpdateChecker.recursiveCheck();
+            var updates = new UpdateChecker().recursiveCheck();
             for (UpdateChecker.Update update : updates) {
                 if (update.available()) {
                     logger.info("You have a mod update available! " + update.id() + " " + update.currentVersion() + " -> " + update.latestVersion());
