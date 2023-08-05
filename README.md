@@ -14,7 +14,7 @@ Jar name format: `nulacore-<minecraft version>-<mod version>`
 
 A mod requires NulaCore v1.3. You can use any version that starts with 1.3 or greater. You cannot use 1.2.
 
-## Installation
+## Using NulaCore in your project
 
 ### Gradle
 
@@ -30,6 +30,6 @@ repositories {
 Add the package to the dependencies section:
 ```groovy
 dependencies {
-    modImplementation("dev.sidgames:NulaCore:1.0.0")
+    modImplementation("dev.sidgames:nulacore:1.0.0")
 }
 ```
