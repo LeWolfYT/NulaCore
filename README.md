@@ -4,6 +4,8 @@ A library containing shared code for my mods
 
 You can find all the releases on modrinth.
 
+Documentation can be found at [https://sidgames5.github.io/javadocs/nulacore/1.0/](https://sidgames5.github.io/javadocs/nulacore/1.0/)
+
 ## Versioning
 
 This library follows the SemVer 2 specification. The format is `major.minor.patch`.
